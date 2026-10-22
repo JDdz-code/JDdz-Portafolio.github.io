@@ -1,1 +1,1 @@
-https://jeuri-ddz.github.io/
+https://jddz-code.github.io/
