@@ -5,155 +5,162 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeuri de León · Portafolio</title>
   <meta name="description" content="Portafolio de Jeuri de León, desarrollador de aplicaciones y videojuegos.">
+  <meta name="theme-color" content="#060a12">
+  <meta property="og:title" content="Jeuri de León · Portafolio">
+  <meta property="og:description" content="Desarrollador de aplicaciones y videojuegos 2D con estética retro.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060a12'/%3E%3Crect x='5' y='5' width='22' height='22' fill='none' stroke='%2300e5ff' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"></div>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="nav-brand">jeuri.dev</a>
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-      <ul class="nav-links">
+  <nav class="navbar" aria-label="Principal">
+    <div class="container nav-inner">
+      <a href="#inicio" class="nav-brand">jeuri.dev</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul class="nav-links" id="menu">
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#tecnologias">Tecnologías</a></li>
-        <li><a href="#proyectos-videojuegos">Proyectos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#formacion">Formación</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
   </nav>
 
-  <main>
+  <header class="hero" id="inicio">
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <div class="container hero-inner">
+      <div class="avatar" aria-hidden="true">JL</div>
+      <div class="hero-text">
+        <h1 class="glitch" data-text="Jeuri de León">Jeuri de León</h1>
+        <p class="role" aria-label="Desarrollador de Aplicaciones y Videojuegos"><span id="type" aria-hidden="true">Desarrollador de Aplicaciones y Videojuegos</span><span class="caret" aria-hidden="true"></span></p>
+        <p class="location">📍 Badalona, Barcelona</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:jeurid01@gmail.com">Email</a>
+          <a class="btn" href="https://github.com/JDdz-code" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="#">CV</a>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#sobre-mi" aria-label="Bajar a Sobre mí"><span></span></a>
+  </header>
+
+  <main id="contenido">
     <div class="container">
 
-      <header class="hero">
-        <div class="avatar">JL</div>
-        <div class="hero-text">
-          <h1>Jeuri de León</h1>
-          <div class="role">Desarrollador de Aplicaciones y Videojuegos</div>
-          <div class="location">📍 Badalona, Barcelona</div>
-          <div class="contact-links">
-            <a href="mailto:jeurid01@gmail.com">Email</a>
-            <a href="https://github.com/JDdz-code" target="_blank" rel="noopener">GitHub</a>
-            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="#">CV</a>
-          </div>
-        </div>
-      </header>
-
       <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p class="about-text">
-          Soy estudiante de Desarrollo de Aplicaciones Multiplataforma (Grado Superior),
-          especializado en videojuegos. Me muevo entre dos mundos: diseño y programo
-          juegos 2D con estética retro/pixel art, y también trabajo con infraestructura
-          y sistemas por mi formación previa en redes. Me interesa tanto la lógica de
-          gameplay como la arquitectura que hay detrás de un proyecto funcionando de verdad.
-        </p>
+        <h2 class="reveal">Sobre mí</h2>
+        <div class="about reveal">
+          <p class="about-text">
+            Soy estudiante de Desarrollo de Aplicaciones Multiplataforma (Grado Superior),
+            especializado en videojuegos. Me muevo entre dos mundos: diseño y programo
+            juegos 2D con estética retro/pixel art, y también trabajo con infraestructura
+            y sistemas por mi formación previa en redes. Me interesa tanto la lógica de
+            gameplay como la arquitectura que hay detrás de un proyecto funcionando de verdad.
+          </p>
+          <dl class="player-card">
+            <div><dt>Estudios</dt><dd>DAM GS · Videojuegos</dd></div>
+            <div><dt>Base</dt><dd>Badalona, Barcelona</dd></div>
+            <div><dt>Motor</dt><dd>Unity · HTML5</dd></div>
+            <div><dt>Estilo</dt><dd>2D retro / pixel art</dd></div>
+          </dl>
+        </div>
       </section>
 
       <section id="tecnologias">
-        <h2>Tecnologías</h2>
-        <div class="tech-grid">
-          <span class="tech-pill">HTML</span>
-          <span class="tech-pill">CSS</span>
-          <span class="tech-pill">JavaScript</span>
-          <span class="tech-pill">Python</span>
-          <span class="tech-pill">C#</span>
-          <span class="tech-pill">Unity</span>
-          <span class="tech-pill">Kotlin</span>
-          <span class="tech-pill">Git / GitHub</span>
-        </div>
+        <h2 class="reveal">Tecnologías</h2>
+        <ul class="tech-grid">
+          <li class="tech-pill reveal">HTML</li>
+          <li class="tech-pill reveal">CSS</li>
+          <li class="tech-pill reveal">JavaScript</li>
+          <li class="tech-pill reveal">Python</li>
+          <li class="tech-pill reveal">C#</li>
+          <li class="tech-pill reveal">Unity</li>
+          <li class="tech-pill reveal">Kotlin</li>
+          <li class="tech-pill reveal">Git / GitHub</li>
+        </ul>
       </section>
 
-      <section id="proyectos-videojuegos">
-        <h2>Proyectos — Videojuegos</h2>
+      <section id="proyectos">
+        <h2 class="reveal">Proyectos</h2>
 
-        <div class="project-group">
-          <div class="project-card">
-            <div class="project-thumb">imagen<br>pendiente</div>
+        <h3 class="group-title reveal">Videojuegos</h3>
+        <div class="cards">
+          <!-- PASO 5: sustituye esta ficha por tu primer juego real -->
+          <article class="project-card is-placeholder reveal">
+            <div class="project-thumb"><span>Captura<br>próximamente</span></div>
             <div class="project-body">
-              <h4>Pendiente</h4>
-              <div class="subtitle">Pendiente</div>
-              <p>Pendiente.</p>
-              <div class="project-tags">
-                <span>Pendiente</span><span>Pendiente</span><span>Pendiente</span><span>Pendiente</span>
-              </div>
-              <div class="project-inks">
-                <a href="#">Repositorio</a>
-                <a href="#">Demo</a>
-              </div>
+              <h4>Próximo juego</h4>
+              <p class="subtitle">En desarrollo</p>
+              <p>Aquí irá la ficha de mi primer proyecto de videojuegos.</p>
             </div>
-          </div>
-      </section>
+          </article>
+        </div>
 
-      <section id="proyectos-software">
-        <h2>Proyectos — Software</h2>
-
-        <div class="project-group">
-          <div class="project-card">
-            <div class="project-thumb"><img src="assets/img/ic_launcher_foreground.webp" alt="Verbo Libre Icon"></div>
+        <h3 class="group-title reveal">Software</h3>
+        <div class="cards">
+          <article class="project-card reveal">
+            <div class="project-thumb"><img src="assets/img/ic_launcher_foreground.webp" alt="Icono de Verbo Libre" loading="lazy"></div>
             <div class="project-body">
               <h4>Verbo Libre</h4>
-              <div class="subtitle">App bíblica Android offline</div>
+              <p class="subtitle">App bíblica Android offline</p>
               <p>App de versículo diario sin publicidad, construida con Kotlin y Jetpack Compose.</p>
-              <div class="project-tags">
-                <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span>
-              </div>
+              <ul class="project-tags">
+                <li>Kotlin</li><li>Jetpack Compose</li><li>Room</li>
+              </ul>
               <div class="project-links">
-                <a href="https://github.com/JDdz-code/Verbo-Libre-Android">Repositorio</a>
+                <a href="https://github.com/JDdz-code/Verbo-Libre-Android" target="_blank" rel="noopener">Repositorio</a>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
       <section id="experiencia">
-        <h2>Experiencia</h2>
-        <p class="timeline-empty">Próximamente — sección en construcción.</p>
+        <h2 class="reveal">Experiencia</h2>
+        <p class="empty reveal">Sección en construcción: aquí irán mis primeras prácticas y colaboraciones.</p>
       </section>
 
       <section id="formacion">
-        <h2>Formación</h2>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">🎓</div>
-          <div class="timeline-body">
-            <div class="row">
-              <h4>DAM GS — Especialidad Videojuegos</h4>
-              <span class="date">Actualidad</span>
+        <h2 class="reveal">Formación</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-icon" aria-hidden="true">🎓</div>
+            <div class="timeline-body">
+              <div class="row">
+                <h4>DAM GS — Especialidad Videojuegos</h4>
+                <span class="date">Actualidad</span>
+              </div>
+              <p class="role">Desarrollo de Aplicaciones Multiplataforma, Grado Superior</p>
+              <p>Formación centrada en desarrollo de videojuegos y aplicaciones multiplataforma.</p>
             </div>
-            <div class="role">Desarrollo de Aplicaciones Multiplataforma, Grado Superior</div>
-            <p>Formación centrada en desarrollo de videojuegos y aplicaciones multiplataforma.</p>
           </div>
         </div>
       </section>
 
       <section id="extra">
-        <h2>Extra</h2>
+        <h2 class="reveal">Extra</h2>
         <div class="gallery-grid">
-          <div class="gallery-card">
-            <div class="gallery-thumb">captura pendiente</div>
-            <div class="gallery-caption">Gameplay — por añadir</div>
-          </div>
-          <div class="gallery-card">
-            <div class="gallery-thumb">captura pendiente</div>
-            <div class="gallery-caption">Gameplay — por añadir</div>
-          </div>
-          <div class="gallery-card">
-            <div class="gallery-thumb">captura pendiente</div>
-            <div class="gallery-caption">Gameplay — por añadir</div>
-          </div>
+          <figure class="gallery-card reveal"><div class="gallery-thumb">captura pendiente</div><figcaption>Gameplay — por añadir</figcaption></figure>
+          <figure class="gallery-card reveal"><div class="gallery-thumb">captura pendiente</div><figcaption>Gameplay — por añadir</figcaption></figure>
+          <figure class="gallery-card reveal"><div class="gallery-thumb">captura pendiente</div><figcaption>Gameplay — por añadir</figcaption></figure>
         </div>
       </section>
 
       <section id="contacto" class="contact-section">
-        <h2>Contacto</h2>
-        <p>¿Quieres hablar sobre un proyecto o una colaboración? Escríbeme directamente.</p>
-        <div class="contact-links">
-          <a href="mailto:jeurid01@gmail.com">Email</a>
-          <a href="https://github.com/JDdz-code" target="_blank" rel="noopener">GitHub</a>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <h2 class="reveal">Contacto</h2>
+        <p class="reveal">¿Quieres hablar sobre un proyecto o una colaboración? Escríbeme directamente.</p>
+        <a class="big-mail reveal" href="mailto:jeurid01@gmail.com">jeurid01@gmail.com</a>
+        <div class="contact-links reveal">
+          <a class="btn" href="https://github.com/JDdz-code" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </section>
 
@@ -162,10 +169,12 @@
 
   <footer>
     <div class="container">
-      Jeuri de León — Portafolio construido con HTML, CSS y JavaScript.
+      <p>Jeuri de León — Portafolio construido con HTML, CSS y JavaScript.</p>
+      <p class="hint">Pista: ↑ ↑ ↓ ↓ ← → ← → B A</p>
     </div>
   </footer>
 
+  <div id="toast" role="status" aria-live="polite"></div>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
