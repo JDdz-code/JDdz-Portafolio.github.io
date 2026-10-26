@@ -1,1 +1,1 @@
-[https://jddz-code.github.io/](https://github.com/JDdz-code/JDdz-Portafolio/)
+[https://jddz-code.github.io/](https://jddz-code.github.io/JDdz-Portafolio.github.io/)
